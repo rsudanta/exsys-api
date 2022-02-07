@@ -43,16 +43,24 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email' => 'required',
-            'password' => 'required',
+            'name' => 'required',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|required|min:8|confirmed',
+            'role' => 'required',
         ], [
-            'password.required' => 'Kamu harus mengisi kata sandi',
+            'name.required' => 'Nama harus diisi',
+            'password.min' => 'Kata sandi minimal 8 karakter',
+            'password.required' => 'Kata sandi harus diisi',
+            'password.confirmed' => 'Konfirmasi Kata Sandi tidak sama',
             'email.required' => 'Kamu harus mengisi email',
+            'email.email' => 'Format email tidak tepat',
+            'email.unique' => 'Email sudah dipakai',
         ]);
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role,
         ]);
 
         return redirect()->route('users.index');
