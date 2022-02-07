@@ -89,14 +89,14 @@ class GejalaController extends Controller
             $request->validate([
                 'nama_gejala' => 'required',
             ], [
-                'nama_gejala.required' => 'Kamu harus mengisi nama penyakit',
+                'nama_gejala.required' => 'Kamu harus mengisi nama gejala',
             ]);
         } else {
             $request->validate([
                 'nama_gejala' => 'required|unique:gejala',
             ], [
-                'nama_gejala.required' => 'Kamu harus mengisi nama penyakit',
-                'nama_gejala.unique' => 'Penyakit sudah ada di dalam daftar',
+                'nama_gejala.required' => 'Kamu harus mengisi nama gejala',
+                'nama_gejala.unique' => 'Gejala sudah ada di dalam daftar',
             ]);
         }
         $data = $request->all();
