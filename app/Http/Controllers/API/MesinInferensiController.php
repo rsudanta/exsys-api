@@ -75,8 +75,6 @@ class MesinInferensiController extends Controller
             $hasilDiagnosa[$x][0]['hasilCF'] = $hasilCF[$x][0];
         }
 
-        // return $hasilDiagnosa;
-
         $hasilMax = array();
 
         for ($x = 0; $x < count($hasilDiagnosa); $x++) {
