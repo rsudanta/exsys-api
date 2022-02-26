@@ -73,7 +73,7 @@
                             <select name="nilai_cf"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 id="grid-last-name">
-                                <option value="0" {{ $item->nilai_cf == 0 ? 'selected' : '' }}>Tidak (0)
+                                <option value="0.2" {{ $item->nilai_cf == 0.2 ? 'selected' : '' }}>Tidak Tahu (0.2)
                                 </option>
                                 <option value="0.4" {{ $item->nilai_cf == 0.4 ? 'selected' : '' }}>Mungkin (0.4)
                                 </option>

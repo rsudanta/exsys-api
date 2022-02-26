@@ -30,7 +30,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($rules as $item )
+                        @forelse ($rules as $item)
                             <tr>
                                 <td class="border px-6 py-4 text-center">{{ $item->id }}</td>
                                 <td class="border px-6 py-4 text-center">{{ $item->penyakit->nama_penyakit }}</td>
