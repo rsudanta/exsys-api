@@ -75,12 +75,14 @@ class MesinInferensiController extends Controller
             $hasilDiagnosa[$x][0]['hasilCF'] = $hasilCF[$x][0];
         }
 
+        // return $hasilDiagnosa;
+
         $hasilMax = array();
 
         for ($x = 0; $x < count($hasilDiagnosa); $x++) {
             if ($x == 0) {
                 array_push($hasilMax, $hasilDiagnosa[$x][0]);
-            } else if ($hasilDiagnosa[$x - 1][0]['hasilCF'] <= $hasilDiagnosa[$x][0]['hasilCF']) {
+            } else if ($hasilMax[0]['hasilCF'] < $hasilDiagnosa[$x][0]['hasilCF']) {
                 $hasilMax = [];
                 array_push($hasilMax, $hasilDiagnosa[$x][0]);
             }

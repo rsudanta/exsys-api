@@ -17,7 +17,7 @@ class BasisPengetahuanController extends Controller
      */
     public function index()
     {
-        $rules = BasisPengetahuan::orderBy('id_penyakit', 'asc')->paginate(20);
+        $rules = BasisPengetahuan::orderBy('id', 'asc')->paginate(20);
         return view('rules.index', [
             'rules' => $rules
         ]);
