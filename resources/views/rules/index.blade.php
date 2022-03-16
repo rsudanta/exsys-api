@@ -25,6 +25,8 @@
                             <th class="border px-6 py-4">ID</th>
                             <th class="border px-6 py-4">Nama Penyakit</th>
                             <th class="border px-6 py-4">Nama Gejala</th>
+                            <th class="border px-6 py-4">MB</th>
+                            <th class="border px-6 py-4">MD</th>
                             <th class="border px-6 py-4">Nilai CF</th>
                             <th class="border px-6 py-4">Tindakan</th>
                         </tr>
@@ -35,6 +37,8 @@
                                 <td class="border px-6 py-4 text-center">{{ $item->id }}</td>
                                 <td class="border px-6 py-4 text-center">{{ $item->penyakit->nama_penyakit }}</td>
                                 <td class="border px-6 py-4 text-center">{{ $item->gejala->nama_gejala }}</td>
+                                <td class="border px-6 py-4 text-center">{{ $item->mb }}</td>
+                                <td class="border px-6 py-4 text-center">{{ $item->md }}</td>
                                 <td class="border px-6 py-4 text-center">{{ $item->nilai_cf }}</td>
                                 <td class="border px-6 py-4 text-center">
                                     <a href="{{ route('rules.edit', $item->id) }}"

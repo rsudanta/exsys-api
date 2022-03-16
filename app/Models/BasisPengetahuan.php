@@ -13,6 +13,8 @@ class BasisPengetahuan extends Model
     protected $fillable = [
         'id',
         'nilai_cf',
+        'mb',
+        'md',
         'id_penyakit',
         'id_gejala',
     ];

@@ -16,6 +16,8 @@ class CreateBasisPengetahuanTable extends Migration
         Schema::create('basis_pengetahuan', function (Blueprint $table) {
             $table->id();
             $table->double('nilai_cf');
+            $table->double('mb');
+            $table->double('md');
             $table->integer('id_penyakit');
             $table->integer('id_gejala');
         });

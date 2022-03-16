@@ -66,21 +66,22 @@
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                 for="grid-last-name">
-                                Nilai CF
+                                Measure of Belief
                             </label>
-                            <select name="nilai_cf"
+                            <input value="{{ old('mb') }}" name="mb"
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-last-name">
-                                <option value="0.2" {{ old('nilai_cf') == 0.2 ? 'selected' : '' }}>Tidak Tahu (0.2)
-                                </option>
-                                <option value="0.4" {{ old('nilai_cf') == 0.4 ? 'selected' : '' }}>Mungkin (0.4)
-                                </option>
-                                <option value="0.6" {{ old('nilai_cf') == 0.6 ? 'selected' : '' }}>Kemungkinan Besar
-                                    (0.6)</option>
-                                <option value="0.8" {{ old('nilai_cf') == 0.8 ? 'selected' : '' }}>Hampir Pasti (0.8)
-                                </option>
-                                <option value="1" {{ old('nilai_cf') == 1 ? 'selected' : '' }}>Pasti (1)</option>
-                            </select>
+                                id="grid-last-name" type="text" placeholder="Measure  of  Belief">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                for="grid-last-name">
+                                Measure of Disbelief
+                            </label>
+                            <input value="{{ old('md') }}" name="md"
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="grid-last-name" type="text" placeholder="Measure   of   Disbelief">
                         </div>
                     </div>
 
